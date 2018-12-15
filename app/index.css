@@ -2,7 +2,9 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-body {
+body,
+h2,
+p {
   margin: 0;
 }
 
@@ -12,6 +14,10 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav-list {
   display: flex;
   background-color: #20232a;
@@ -19,19 +25,60 @@ ul {
 
 .nav-link {
   font-size: 18px;
-  text-decoration: none;
   font-weight: 300;
   color: #ffffff;
   display: block;
-  padding:10px 20px;
-  transition: 0.3s color;
+  padding: 10px 20px;
 }
 
-.nav-link:hover{
-  color:#61dafb;
+a:hover {
+  color: #61dafb;
+  transition: 0.3s color;
 }
 
 .nav-link-active {
   color: #61dafb;
   border-bottom: 3px solid #61dafb;
+}
+
+.post {
+  display: flex;
+  align-items: stretch;
+  margin: 20px;
+}
+
+.post-left{
+  min-width: 50px;
+  padding: 5px;
+  background-color: rgb(236, 236, 236);
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+}
+
+.post-right {
+  padding: 5px;
+  flex:1;
+  background-color: rgb(40, 44, 52);
+  color: #ffffff;
+  border-radius: 0 10px 10px 0;
+}
+
+.post-subreddit {
+  color: rgb(250, 200, 99);
+}
+
+.post-title-link {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.post-author {
+  color: rgb(197, 165, 197);
+}
+
+.post-score {
+  font-weight: 600;
 }

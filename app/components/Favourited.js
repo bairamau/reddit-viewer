@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Popular(){
   return(
-    <div>Favourited</div>
+    <div>Xd</div>
   )
 }
