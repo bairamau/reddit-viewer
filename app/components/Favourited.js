@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default function Popular(){
+function Favourited(){
   return(
     <div>Xd</div>
   )
 }
+
+export default Favourited;

@@ -18,17 +18,21 @@ a {
   text-decoration: none;
 }
 
-.nav-list {
+.nav{
+  font-size: 18px;
   display: flex;
   background-color: #20232a;
 }
 
+.nav-list {
+  display:flex;
+}
+
 .nav-link {
-  font-size: 18px;
   font-weight: 300;
   color: #ffffff;
   display: block;
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 a:hover {
@@ -41,44 +45,84 @@ a:hover {
   border-bottom: 3px solid #61dafb;
 }
 
-.post {
+.form-search {
+  display:flex;
+  align-items:center;
+}
+
+.input-search{
+  background-color: transparent;
+  background-image:url('https://reactjs.org/search.svg');
+  background-repeat:no-repeat;
+  background-size: 18px 18px;
+  background-position: 6px center;
+  color: white;
+  padding:5px 5px 5px 30px;
+  border-radius:5px;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 18px;
+  outline:none;
+  border:none;
+}
+
+.input-search:focus{
+  background-color: #373940;
+}
+
+.list-item {
   display: flex;
   align-items: stretch;
   margin: 20px;
 }
 
-.post-left{
+.list-item-left {
   min-width: 50px;
   padding: 5px;
   background-color: rgb(236, 236, 236);
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   border-radius: 10px 0 0 10px;
 }
 
-.post-right {
+.list-item-right {
   padding: 5px;
-  flex:1;
+  flex: 1;
   background-color: rgb(40, 44, 52);
   color: #ffffff;
   border-radius: 0 10px 10px 0;
 }
 
-.post-subreddit {
+.list-item-subreddit {
   color: rgb(250, 200, 99);
 }
 
-.post-title-link {
+.list-item-title-link {
   color: #ffffff;
   font-weight: 300;
 }
 
-.post-author {
+.list-item-author {
   color: rgb(197, 165, 197);
 }
 
-.post-score {
+.list-item-score {
   font-weight: 600;
+}
+
+.loading,
+.not-found {
+  margin-top: 30vh;
+  text-align: center;
+  font-size: 50px;
+}
+
+.list-container {
+  display: flex;
+}
+
+.list {
+  flex:1;
 }

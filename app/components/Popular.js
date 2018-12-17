@@ -1,29 +1,28 @@
 import React from 'react';
-import { fetchPopularPosts } from '../utils/api';
-import Post from './Post';
+import {getCommunityPosts} from '../utils/api';
+import List from './List';
+import Loading from './Loading';
 
-export default class Popular extends React.Component {
+class Popular extends React.Component {
+  componentDidMount() {
+    this.updatePosts();
+  }
+
   state = {
     posts: null
+  }
+
+  updatePosts = async () => {
+    const posts = await getCommunityPosts('popular');
+    this.setState(() => ({posts}));
   }
 
   render() {
     return (
       !this.state.posts
-        ? <div>Loading</div>
-        : <ul>
-          {this.state.posts.map(({ data }) => <li key={data.id}><Post data={data} /></li>)}
-        </ul>
-    )
+      ? <Loading/>
+      : <List items={this.state.posts}/>)
   }
-
-  updatePosts = async () => {
-    const posts = await fetchPopularPosts();
-    this.setState(() => ({ posts }));
-  }
-
-  componentDidMount() {
-    this.updatePosts();
-  }
-
 }
+
+export default Popular;

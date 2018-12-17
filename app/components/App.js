@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './Nav';
-import Popular from './Popular';
+import Search from './Search';
 import Favourited from './Favourited';
+import Popular from './Popular';
 
-export default function App() {
+function App() {
   return (
     <Router>
       <div>
@@ -12,9 +13,12 @@ export default function App() {
         <Switch>
           <Route exact path='/' component={Popular} />
           <Route path='/favourited' component={Favourited} />
-          <Route render={() => <p>Not Found</p>} />
+          <Route path='/search' component={Search} />
+          <Route render={() => <p className='not-found'>Not Found</p>} />
         </Switch>
       </div>
     </Router>
   )
 }
+
+export default App;
