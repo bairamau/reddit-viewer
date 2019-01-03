@@ -35,7 +35,7 @@ a {
   padding: 15px 20px;
 }
 
-a:hover {
+.nav-link:hover { 
   color: #61dafb;
   transition: 0.3s color;
 }
@@ -46,6 +46,7 @@ a:hover {
 }
 
 .form-search {
+  margin-left: 30px;
   display:flex;
   align-items:center;
 }
@@ -119,10 +120,25 @@ a:hover {
   font-size: 50px;
 }
 
-.list-container {
-  display: flex;
+.list {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.list {
-  flex:1;
+.nav-results {
+  background-color: #282c34;
+  justify-content: center;
+}
+
+.nav-results-link {
+  display:block;
+  font-size: 20px;
+  color: #61dafb;
+  padding: 20px;
+  text-decoration:none;
+}
+
+.nav-results-link-active {
+  color:#282c34;
+  background-color: #61dafb;
 }

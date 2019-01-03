@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './Nav';
 import Search from './Search';
-import Favourited from './Favourited';
 import Popular from './Popular';
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path='/' component={Popular} />
-          <Route path='/favourited' component={Favourited} />
           <Route path='/search' component={Search} />
           <Route render={() => <p className='not-found'>Not Found</p>} />
         </Switch>

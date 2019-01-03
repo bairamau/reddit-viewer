@@ -12,7 +12,7 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <form className='form-search' action='/search'>
+      <form className='form-search' action='/search/communities'>
         <input className='input-search'
           name='q'
           type='search'

@@ -1,17 +1,22 @@
 import React from 'react';
-import ListItem from './ListItem';
 
 function List(props) {
-  return (<ul class='list'>
-    {
-      props.items.map(
-        ({kind, data}) => {
-        return (<li key={data.id}>
-          <ListItem kind={kind} data={data}/>
-        </li>)
-      })
-    }
-  </ul>)
+  return props.items.length === 0
+  ? <p className='not-found'>No matches :C</p>
+  :( 
+    <ul className='list'>
+      {
+        props.items.map(
+          ({ kind, data }) => {
+            return (
+              <li key={data.id}>
+                {props.children(data)}
+              </li>
+            )
+          })
+      }
+    </ul>
+  )
 }
 
 export default List;

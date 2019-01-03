@@ -10,11 +10,6 @@ function Nav() {
             Popular
           </NavLink>
         </li>
-        {/*<li>
-          <NavLink className='nav-link' activeClassName='nav-link-active' to='/favourited'>
-            Favourited
-          </NavLink>
-        </li>*/}
       </ul>
       <SearchForm />
     </nav>
