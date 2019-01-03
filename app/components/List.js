@@ -2,7 +2,7 @@ import React from 'react';
 import ListItem from './ListItem';
 
 function List(props) {
-  return (<ul class='list'>
+  return (<ul className='list'>
     {
       props.items.map(
         ({kind, data}) => {
