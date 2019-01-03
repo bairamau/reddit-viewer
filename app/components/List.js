@@ -6,7 +6,7 @@ function List(props) {
       props.items.map(
         ({kind, data}) => {
         return (<li key={data.id}>
-          <ListItem kind={kind} data={data}/>
+          {props.children(data)}
         </li>)
       })
     }
